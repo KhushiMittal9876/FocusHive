@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { VscDebugRestart } from "react-icons/vsc";
 import { FaPlay } from "react-icons/fa";
 import { MdOutlinePause } from "react-icons/md";
-import { TfiTimer } from "react-icons/tfi";
 import "./Timer.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -12,7 +11,6 @@ function Timer() {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const [isRunning, setIsRunning] = useState(null);
-  const [showdiv, setShowdiv] = useState(false);
   const notify = () => toast.success("Time Completed!");
   const alert = () => toast.error("Enter Valid values!!");
 
@@ -46,7 +44,6 @@ function Timer() {
       setIsRunning(true);
     }
   };
-
   const reValueTimer = () => {
     restartTimer();
   };
@@ -56,7 +53,6 @@ function Timer() {
     setSeconds(0);
     setIsRunning(false);
   };
-
   const pauseTimer = () => {
     setIsRunning(false);
   };
@@ -71,9 +67,9 @@ function Timer() {
   };
   return (
     <>
-      <div className="mainbox">
-      {showdiv && <div className="timerBox">
+        <div className="timerBox">
           <div className="bgbox"></div>
+          <h1 className="titles">Timer</h1>
           <ToastContainer
             position="top-right"
             autoClose={3000}
@@ -112,9 +108,7 @@ function Timer() {
           <button className="restartbtn" onClick={reValueTimer}>
             <VscDebugRestart />
           </button>
-        </div>}
-      </div> 
-      <button className="btn Timer" onClick={()=>setShowdiv((prev) => !prev)}><TfiTimer />{!showdiv ? <h2>Show Timer</h2> : <h2>Hide Timer</h2>}</button>
+        </div>  
     </>
   );
 }

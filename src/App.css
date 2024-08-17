@@ -6,10 +6,4 @@ body{
     background-size:cover;
     background-position:left center;
     background-repeat: no-repeat;
-    opacity:0.;
 }
-.main{
-    height: 95vh;
-    width: 100%;  
-}
-

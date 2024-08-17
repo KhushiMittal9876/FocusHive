@@ -1,7 +1,21 @@
 h1{
     color: rgb(235, 238, 241);
-    font-size: 35px;
+    font: size 20px;
     font-style: italic;
-    margin-top:5vh;
+    width: 200px;
+    display: flex;
 }
+span{
+    color: rgb(235, 238, 241);
+    font-style: italic;
+    font-size: 30px;
+    width:200px;
+    margin-left: 10px;
 
+}
+.currentDateTime{
+    width: 200px;
+    margin-top: 5vh;
+    z-index: 2;
+    position: absolute;
+}
