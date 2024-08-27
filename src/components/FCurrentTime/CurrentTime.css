@@ -15,7 +15,7 @@ span{
 }
 .currentDateTime{
     width: 200px;
-    margin-top: 5vh;
+    margin-top: 2vh;
     z-index: 2;
     position: absolute;
 }
