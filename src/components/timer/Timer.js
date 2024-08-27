@@ -81,7 +81,7 @@ function Timer() {
             draggable
             theme="dark"
           />
-          <div className="box">
+          <div className="bx">
             <div className="cont">
               <label htmlFor="">hh</label>
               <input type="text" value={hours} onChange={changeHours} />

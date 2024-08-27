@@ -13,7 +13,7 @@ const List = ({items, removeItem,editItem,handleCheck}) => {
       return (
         <article key={id} className="grocery-item">
         <button className="check" onClick={()=> handleCheck(id)}>
-        {item.checked ? <MdCheckBox className="box" /> : <MdCheckBoxOutlineBlank  />}  
+        {item.checked ? <MdCheckBox className="boxe" /> : <MdCheckBoxOutlineBlank  />}  
         </button>
         <p className={item.checked ? 'title-strike' : 'title'}>{title}</p>
         <div className="btn-container">

@@ -1,12 +1,12 @@
 h1{
-    color: rgb(235, 238, 241);
+    color: #012e12;
     font: size 20px;
     font-style: italic;
     width: 200px;
     display: flex;
 }
 span{
-    color: rgb(235, 238, 241);
+    color:#012e12;
     font-style: italic;
     font-size: 30px;
     width:200px;

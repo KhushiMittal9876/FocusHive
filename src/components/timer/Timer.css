@@ -1,6 +1,6 @@
 .titles{
-    color: black;
-    font-weight: 700;
+    color: #012e12;
+    font-weight: 800;
     margin-left: 150px;
     margin-top: 10px;
 }
@@ -34,7 +34,7 @@
     border: none;
     background-color: rgb(208, 219, 231);
 }
-.box{
+.bx{
     margin-top: 1vh;
     width:200px;
     margin-left: auto;
