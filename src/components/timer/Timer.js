@@ -72,14 +72,14 @@ function Timer() {
           <h1 className="titles">Timer</h1>
           <ToastContainer
             position="top-right"
-            autoClose={3000}
+            autoClose={2000}
             hideProgressBar={false}
             newestOnTop={false}
             closeOnClick
             rtl={false}
             pauseOnFocusLoss
             draggable
-            theme="dark"
+            theme="light"
           />
           <div className="bx">
             <div className="cont">

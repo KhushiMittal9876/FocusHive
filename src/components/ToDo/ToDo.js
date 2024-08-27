@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import List from "./List";
 import "./ToDo.css";
 import { GiFallingStar } from "react-icons/gi";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const getLocalStorage = () =>{
     let list = localStorage.getItem('list');
@@ -17,11 +19,15 @@ const getLocalStorage = () =>{
     const [list, setList] = useState(getLocalStorage());
     const [isEditing, setIsEditing] = useState(false);
     const [editID, setEditID] = useState(null);
+    const alert = () => toast.error("Enter value!!");
     // const [isCheck, setIsCheck] = useState(false)
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      if (name && isEditing) {
+      if(!name){
+        alert();
+      }
+      else if (name && isEditing) {
         // deal with edit
         setList(list.map((item)=>{
           if(item.id === editID){
@@ -69,6 +75,17 @@ const getLocalStorage = () =>{
   
     return (
       <section className="section-center">
+      <ToastContainer
+            position="top-right"
+            autoClose={2000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            theme="light"
+          />
         <form className="grocery-form" onSubmit={handleSubmit}>
           <h3 className='h3h'>
             To Do's <GiFallingStar />
